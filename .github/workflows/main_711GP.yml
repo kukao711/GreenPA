@@ -12,7 +12,7 @@ on:
 env:
   AZURE_FUNCTIONAPP_NAME: 711GP # set this to your function app name on Azure
   PACKAGE_DIRECTORY: '.' # set this to the directory which contains pom.xml file
-  JAVA_VERSION: '8' # set this to the java version to use
+  JAVA_VERSION: '11' # set this to the java version to use
 
 jobs:
   build-and-deploy:
@@ -38,6 +38,6 @@ jobs:
       with:
         app-name: '711GP'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_07f99adca6a94ba6995954319afd8e68 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_8a344bedc48843d38c7d5b797cd5ca62 }}
         package: '${{ env.PACKAGE_DIRECTORY }}'
         respect-pom-xml: true
