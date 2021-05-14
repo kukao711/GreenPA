@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_profile">
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.thepyprogrammer.greenpass.ui.main.settings.SettingsFragment"
+        android:label="Settings" >
+        <action
+            android:id="@+id/action_nav_settings_to_nav_pass"
+            app:destination="@id/nav_pass"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_settings_to_nav_profile"
+            app:destination="@id/nav_profile"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_pass"
+        android:name="com.thepyprogrammer.greenpass.ui.main.pass.PassFragment"
+        android:label="Green Pass"
+        tools:layout="@layout/fragment_pass" >
+        <action
+            android:id="@+id/action_nav_pass_to_nav_profile"
+            app:destination="@id/nav_profile"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_pass_to_nav_settings"
+            app:destination="@id/nav_settings"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.thepyprogrammer.greenpass.ui.main.profile.ProfileFragment"
+        android:label="Your Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_nav_profile_to_nav_pass"
+            app:destination="@id/nav_pass"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+        <action
+            android:id="@+id/action_nav_profile_to_nav_settings"
+            app:destination="@id/nav_settings"
+            app:enterAnim="@anim/slide_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_out"
+            app:popExitAnim="@anim/fade_out" />
+    </fragment>
+</navigation>

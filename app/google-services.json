@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044609154419",
+    "project_id": "green-pass-e25d0",
+    "storage_bucket": "green-pass-e25d0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044609154419:android:1b077c950cb0749f1b5906",
+        "android_client_info": {
+          "package_name": "com.thepyprogrammer.greenpass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044609154419-85sm9uvvjh8i1pntqppg7p25ragabffe.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD42YJg_qMw38mFHgGjoFQPGayseUP3FTY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044609154419-85sm9uvvjh8i1pntqppg7p25ragabffe.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

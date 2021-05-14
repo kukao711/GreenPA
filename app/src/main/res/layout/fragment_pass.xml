@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="?attr/fullscreenBackgroundColor"
+    android:theme="@style/ThemeOverlay.GreenPass.FullscreenContainer"
+    tools:context=".ui.main.pass.PassFragment">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/fullscreen_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:keepScreenOn="true"
+        android:layout_margin="20dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        app:contentPadding="10dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/autogen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/name"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/autogenText"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="?attr/colorSecondaryVariant"
+                />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/autogen"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/autogen2"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/namePlaceholder"
+                android:textSize="50sp"
+                android:gravity="center"
+                android:textColor="?attr/fullscreenTextColor"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/autogen2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/date"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/autogenText2"
+                android:textSize="35sp"
+                android:gravity="center"
+                android:textStyle="italic"
+                android:textColor="?attr/colorSecondaryVariant"
+                />
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/autogen2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:text="@string/datePlaceholder"
+                android:textSize="50sp"
+                android:textColor="?attr/fullscreenTextColor"
+                android:gravity="center"
+                android:textStyle="bold"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>
